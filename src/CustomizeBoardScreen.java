@@ -6,6 +6,12 @@ import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+/** 
+ * @autor windsor aguilar mitma
+ * @version numero 1
+ * @see 
+ */
+
 
 //needs massive improvements
 public class CustomizeBoardScreen extends JPanel {
@@ -14,14 +20,24 @@ public class CustomizeBoardScreen extends JPanel {
     JButton quit;
     MainWindow mw;
 
+    /**
+     *
+     */
     public void quitButtonActionListener() {
         mw.showCard("Two");
     }
 
+    /**
+     *
+     */
     public void goButtonActionListener() {
         mw.showCard("Four");
     }
 
+    /**
+     *
+     * @param mw
+     */
     public CustomizeBoardScreen(MainWindow mw) {
         this.mw = mw;
 

@@ -1,4 +1,5 @@
 
+
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -10,6 +11,12 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+
+/** 
+ * @autor windsor aguilar mitma
+ * @version numero 1
+ * @see 
+ */
 
 public class BoardScreen extends JPanel {
 
@@ -36,26 +43,43 @@ public class BoardScreen extends JPanel {
     JButton go;
     JButton quit;
 
+    /**
+     *
+     */
     public void quitButtonActionListener() {
         if (JOptionPane.showConfirmDialog(this, "Are you sure?") == JOptionPane.OK_OPTION) {
             System.exit(0);
         }
     }
 
+    /**
+     *
+     */
     public void goButtonActionListener() {
         mw.showCard("Two");
         //mw.setBoard();
         mw.resetAll();
     }
 
+    /**
+     *
+     * @param m
+     */
     public void setMaxPlayers(int m) {
         maxPlayers = m;
     }
 
+    /**
+     *
+     * @return
+     */
     public int returnMaxPlayers() {
         return maxPlayers;
     }
 
+    /**
+     *
+     */
     public void setUpPlayers() {
         players = new ArrayList<Player>();
         for (int i = 0; i < returnMaxPlayers(); i++) {
@@ -76,6 +100,10 @@ public class BoardScreen extends JPanel {
 
     }
 
+    /**
+     *
+     * @param mw
+     */
     public BoardScreen(MainWindow mw) {
         this.mw = mw;
 

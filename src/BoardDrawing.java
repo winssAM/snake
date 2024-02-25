@@ -1,3 +1,4 @@
+
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -10,6 +11,11 @@ import javax.swing.JPanel;
 //note: board shape and window aesthetics to be set
 //note: unification of colors not done
 
+/** 
+ * @autor windsor aguilar mitma
+ * @version numero 1
+ *  
+ */
 
 public class BoardDrawing extends JPanel{
 
@@ -25,7 +31,13 @@ public class BoardDrawing extends JPanel{
 	BoardScreen bs;
 	//ArrayList<Player> players;
 	
-	public BoardDrawing(int row, int col,BoardScreen bs){
+    /**
+     *
+     * @param row
+     * @param col
+     * @param bs
+     */
+    public BoardDrawing(int row, int col,BoardScreen bs){
 		this.bs = bs;
 		
 		this.row = row;
@@ -63,7 +75,11 @@ public class BoardDrawing extends JPanel{
 	
 	}
 	
-	public void paintComponent(Graphics g){
+    /**
+     *
+     * @param g
+     */
+    public void paintComponent(Graphics g){
 		super.paintComponent(g);
 		Graphics2D g2d = (Graphics2D) g;//.create();
 		
@@ -182,6 +198,13 @@ public class BoardDrawing extends JPanel{
 		}
 	}
 	*/
+
+    /**
+     *
+     * @param pnos
+     * @return
+     */
+
 	public String ensurePlayerPosition(int pnos){
 		String message = "";
 		for(Portal port :bs.portals){
@@ -202,6 +225,13 @@ public class BoardDrawing extends JPanel{
 		player = a;
 	}
 	*/
+
+    /**
+     *
+     * @param a
+     * @param pnos
+     */
+
 	
 	public void setPlayer(int a, int pnos){
 		bs.players.get(pnos).incPosition(a);

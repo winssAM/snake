@@ -1,6 +1,12 @@
 
 import java.awt.Point;
 import java.util.Random;
+/** 
+ * @autor windsor aguilar mitma
+ * @version numero 1
+ * @see 
+ */
+
 
 public class Portal {
 
@@ -8,6 +14,10 @@ public class Portal {
     private int start;
     private int end;
 
+    /**
+     *
+     * @param maxCells
+     */
     public Portal(int maxCells) {   //creates random portals
         Random luck = new Random();
         start = luck.nextInt(maxCells);
@@ -19,14 +29,26 @@ public class Portal {
         }
     }
 
+    /**
+     *
+     * @return
+     */
     public int returnNature() {
         return nature;
     }
 
+    /**
+     *
+     * @return
+     */
     public int returnStart() {
         return start;
     }
 
+    /**
+     *
+     * @return
+     */
     public int returnEnd() {
         return end;
     }

@@ -1,3 +1,8 @@
+/** 
+ * @autor windsor aguilar mitma
+ * @version numero 1
+ * @see 
+ */
 
 import java.awt.CardLayout;
 import java.awt.FlowLayout;
@@ -10,6 +15,10 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
+/**
+ *
+ * @author win_a
+ */
 public class WelcomeScreen extends JPanel {
 
     private static final String ARE_YOU_SURE = "Are you sure?";
@@ -20,20 +29,34 @@ public class WelcomeScreen extends JPanel {
 
     MainWindow mw;
 
+    /**
+     *
+     * @param t
+     */
     public void setTitle(String t) {
         title.setText(t);
     }
 
+    /**
+     *
+     */
     public void quitButtonActionListener() {
         if (JOptionPane.showConfirmDialog(this, ARE_YOU_SURE) == JOptionPane.OK_OPTION) {
             System.exit(0);
         }
     }
 
+    /**
+     *
+     */
     public void goButtonActionListener() {
         mw.showCard("Two");
     }
 
+    /**
+     *
+     * @param mw
+     */
     public WelcomeScreen(MainWindow mw) {
         this.mw = mw;
 

@@ -1,5 +1,11 @@
 
 import javax.swing.SwingUtilities;
+/** 
+ * @autor windsor aguilar mitma
+ * @version numero 1
+ * @see 
+ */
+
 
 public class Main {
 
